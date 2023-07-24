@@ -8,17 +8,17 @@ import { useForm } from "react-hook-form";
 import { useRouter } from "next/navigation";
 import { VideoIcon } from "lucide-react";
 
-
+import { formSchema } from "./constants";
+import { useProModal } from "@/hooks/use-pro-modal";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Form, FormControl, FormField, FormItem } from "@/components/ui/form";
-
-import { formSchema } from "./constants";
 import Heading from "@/components/Heading";
 import Loader from "@/components/Loader";
 import Empty from "@/components/Empty";
 
 const VideoPage = () => {
+  const proModal = useProModal();
   const router = useRouter();
   const [video, setVideo] = useState<string>();
 
@@ -40,7 +40,9 @@ const VideoPage = () => {
       setVideo(response.data[0]);
       form.reset();
     } catch (error: any) {
-      console.error(error);
+      if (error?.response?.status === 403) {
+        proModal.onOpen();
+      }
     } finally {
       router.refresh();
     }
