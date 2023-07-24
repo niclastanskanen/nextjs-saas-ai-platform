@@ -8,6 +8,7 @@ import { Download, ImageIcon } from "lucide-react";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
+import { toast } from "react-hot-toast";
 
 import { cn } from "@/lib/utils";
 import { useProModal } from "@/hooks/use-pro-modal";
@@ -51,6 +52,8 @@ const ImagePage = () => {
     } catch (error: any) {
       if (error?.response?.status === 403) {
         proModal.onOpen();
+      } else {
+        toast.error("Something went wrong.")
       }
     } finally {
       router.refresh();

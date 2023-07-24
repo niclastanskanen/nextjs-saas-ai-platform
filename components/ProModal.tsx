@@ -11,6 +11,7 @@ import {
   VideoIcon,
   Zap,
 } from "lucide-react";
+import { toast } from "react-hot-toast";
 
 import { cn } from "@/lib/utils";
 import { useProModal } from "@/hooks/use-pro-modal"
@@ -70,7 +71,7 @@ const ProModal = () => {
       
       window.location.href = response.data.url
     } catch (error) {
-      console.log(error, "STRIPE_CLIENT_ERROR")
+      toast.error("Something went wrong.")
     } finally {
       setLoading(false)
     }
@@ -109,6 +110,7 @@ const ProModal = () => {
         </DialogHeader>
         <DialogFooter>
           <Button
+            disabled={loading}
             onClick={onSubscribe}
             size="lg"
             variant="premium"
