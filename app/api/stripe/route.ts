@@ -1,19 +1,19 @@
-import { auth, currentUser } from '@clerk/nextjs';
-import { NextResponse } from 'next/server';
+import { auth, currentUser } from "@clerk/nextjs";
+import { NextResponse } from "next/server";
 
-import prismadb from '@/lib/prismadb';
-import { stripe } from '@/lib/stripe';
-import { absoluteUrl } from '@/lib/utils';
+import prismadb from "@/lib/prismadb";
+import { stripe } from "@/lib/stripe";
+import { absoluteUrl } from "@/lib/utils";
 
-const settingsUrl = absoluteUrl('/settings');
+const settingsUrl = absoluteUrl("/settings");
 
-export async function GEt() {
+export async function GET() {
   try {
-    const { userId } = auth()
+    const { userId } = auth();
     const user = await currentUser();
 
     if (!userId || !user) {
-      return new NextResponse("Unauthorized", { status: 401 })
+      return new NextResponse("Unauthorized", { status: 401 });
     }
 
     const userSubscription = await prismadb.userSubscription.findUnique({
@@ -43,16 +43,16 @@ export async function GEt() {
           price_data: {
             currency: "USD",
             product_data: {
-              name: "Genius PRO",
-              description: "Unlimited AI Generations",
+              name: "Genius Pro",
+              description: "Unlimited AI Generations"
             },
             unit_amount: 2000,
             recurring: {
-              interval: "month",
+              interval: "month"
             }
           },
           quantity: 1,
-        }
+        },
       ],
       metadata: {
         userId,
@@ -61,7 +61,7 @@ export async function GEt() {
 
     return new NextResponse(JSON.stringify({ url: stripeSession.url }))
   } catch (error) {
-    console.log("[STRIPE_ERROR]", error)
-    return new NextResponse("Internal error", { status: 500 })
+    console.log("[STRIPE_ERROR]", error);
+    return new NextResponse("Internal Error", { status: 500 });
   }
-}
+};
