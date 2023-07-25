@@ -3,9 +3,9 @@
 import { useEffect, useState } from "react";
 import { Menu } from "lucide-react";
 
-import { Button } from "@/ad/components/ui/button";
-import { Sheet, SheetContent, SheetTrigger } from "@/ad/components/ui/sheet";
-import Sidebar from "@/ad/components/Sidebar";
+import { Button } from "@/components/ui/button";
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import Sidebar from "@/components/Sidebar";
 
 interface MobileSidebarProps {
   apiLimitCount: number;

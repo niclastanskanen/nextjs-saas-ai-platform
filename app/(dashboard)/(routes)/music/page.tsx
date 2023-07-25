@@ -10,13 +10,13 @@ import { Music } from "lucide-react";
 import { toast } from "react-hot-toast";
 
 import { useProModal } from "@/hooks/use-pro-modal";
-import { Button } from "@/ad/components/ui/button";
-import { Input } from "@/ad/components/ui/input";
-import { Form, FormControl, FormField, FormItem } from "@/ad/components/ui/form";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Form, FormControl, FormField, FormItem } from "@/components/ui/form";
 import { formSchema } from "./constants";
-import Heading from "@/ad/components/Heading";
-import Loader from "@/ad/components/Loader";
-import Empty from "@/ad/components/Empty";
+import Heading from "@/components/Heading";
+import Loader from "@/components/Loader";
+import Empty from "@/components/Empty";
 
 const MusicPage = () => {
   const proModal = useProModal();
