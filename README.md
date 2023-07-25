@@ -4,13 +4,13 @@
 
 [![My Skills](https://skillicons.dev/icons?i=nextjs,react,tailwind,vercel)](https://skillicons.dev)
 
-![AI SaaS Landing](./public/readme/landing.png)
-
-![AI SaaS Platform](./public/readme/platform.png)
-
 The AI SaaS Platform is an innovative web application that brings together five powerful AI tools to help you create content faster and more efficiently.
 
 Powered by Next.js 13 App Router, Stripe, Clerk, Shadcn, and Tailwind CSS, this platform harnesses the capabilities of cutting-edge AI models from Open AI and Replicate AI.
+
+![AI SaaS Landing](./public/readme/landing.png)
+
+![AI SaaS Platform](./public/readme/platform.png)
 
 ## AI Tools Included
 
