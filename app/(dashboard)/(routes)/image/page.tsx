@@ -11,14 +11,14 @@ import Image from "next/image";
 import { toast } from "react-hot-toast";
 
 import { useProModal } from "@/hooks/use-pro-modal";
-import Heading from "@/components/Heading";
-import { Form, FormControl, FormField, FormItem } from "@/components/ui/form";
-import { Input } from "@/components/ui/input";
-import { Button } from "@/components/ui/button";
-import Empty from "@/components/Empty";
-import Loader from "@/components/Loader";
-import { Card, CardFooter } from "@/components/ui/card";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import Heading from "@/ad/components/Heading";
+import { Form, FormControl, FormField, FormItem } from "@/ad/components/ui/form";
+import { Input } from "@/ad/components/ui/input";
+import { Button } from "@/ad/components/ui/button";
+import Empty from "@/ad/components/Empty";
+import Loader from "@/ad/components/Loader";
+import { Card, CardFooter } from "@/ad/components/ui/card";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/ad/components/ui/select";
 import { amountOptions, formSchema, resolutionOptions } from "./constants";
 
 

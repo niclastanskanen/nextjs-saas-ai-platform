@@ -1,7 +1,7 @@
 "use client"
 
 import React, { useEffect, useState } from 'react'
-import ProModal from '@/components/ProModal'
+import ProModal from '@/ad/components/ProModal'
 
 const ModalProvider = () => {
   const [isMounted, setIsMounted] = useState(false)

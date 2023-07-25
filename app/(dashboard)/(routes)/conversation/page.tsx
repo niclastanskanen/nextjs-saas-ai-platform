@@ -12,15 +12,15 @@ import { toast } from "react-hot-toast";
 
 import { cn } from "@/lib/utils";
 import { useProModal } from "@/hooks/use-pro-modal";
-import Heading from "@/components/Heading";
-import { Form, FormControl, FormField, FormItem } from "@/components/ui/form";
-import { Input } from "@/components/ui/input";
-import { Button } from "@/components/ui/button";
+import Heading from "@/ad/components/Heading";
+import { Form, FormControl, FormField, FormItem } from "@/ad/components/ui/form";
+import { Input } from "@/ad/components/ui/input";
+import { Button } from "@/ad/components/ui/button";
 import { formSchema } from "./constants";
-import Empty from "@/components/Empty";
-import Loader from "@/components/Loader";
-import UserAvatar from "@/components/UserAvatar";
-import BotAvatar from "@/components/BotAvatar";
+import Empty from "@/ad/components/Empty";
+import Loader from "@/ad/components/Loader";
+import UserAvatar from "@/ad/components/UserAvatar";
+import BotAvatar from "@/ad/components/BotAvatar";
 
 const ConversationPage = () => {
   const proModal = useProModal();

@@ -5,7 +5,7 @@ import { useState } from "react";
 import { Zap } from "lucide-react";
 import { toast } from "react-hot-toast";
 
-import { Button } from "@/components/ui/button";
+import { Button } from "@/ad/components/ui/button";
 import { set } from "zod";
 
 interface SubscriptionButtonProps {

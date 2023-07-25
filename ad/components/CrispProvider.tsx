@@ -1,6 +1,6 @@
 "use client"
 
-import { CrispChat } from "@/components/CrispChat"
+import { CrispChat } from "@/ad/components/CrispChat"
 
 const CrispProvider = () => {
   return (

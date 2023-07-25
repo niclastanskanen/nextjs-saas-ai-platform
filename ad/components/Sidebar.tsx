@@ -15,7 +15,7 @@ import {
 } from "lucide-react";
 
 import { cn } from '@/lib/utils';
-import FreeCounter from '@/components/FreeCounter'
+import FreeCounter from '@/ad/components/FreeCounter'
 
 const montserrat = Montserrat({
     weight: "600",

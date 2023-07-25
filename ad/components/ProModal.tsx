@@ -22,10 +22,10 @@ import {
   DialogFooter,
   DialogHeader,
   DialogTitle,
-} from "@/components/ui/dialog";
-import { Badge } from "@/components/ui/badge"
-import { Card } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
+} from "@/ad/components/ui/dialog";
+import { Badge } from "@/ad/components/ui/badge"
+import { Card } from "@/ad/components/ui/card";
+import { Button } from "@/ad/components/ui/button";
 
 const tools = [
   {
