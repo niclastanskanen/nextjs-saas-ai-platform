@@ -54,4 +54,4 @@ Here are some of the key dependencies used in the project:
 
 ---
 
-Thank you for checking out our project! Happy coding! 🚀
+Thank you for checking out my project! Happy coding! 🚀
